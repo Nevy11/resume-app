@@ -1,2 +1,26 @@
 <nevy11-top-name></nevy11-top-name>
 <router-outlet />
+<!-- 
+Personal Info: Name, title, email, phone, location.
+
+Education: School, degree, graduation year.
+
+Work Experience: Company, role, start-end dates, description.
+
+Skills: Dynamic chip list for skills (e.g., Angular, Rust, PyTorch).
+
+Projects: Title, description, link, tech stack.
+-->
+
+<mat-card class="p-4">
+  <mat-card-title>Personal Information</mat-card-title>
+  <mat-card-content>
+    <nevy11-personal-info
+      [(data)]="resumeData.personalInfo"
+    ></nevy11-personal-info>
+  </mat-card-content>
+</mat-card>
+
+<pre class="mt-4 p-2 bg-gray-100 rounded">
+  {{ resumeData.personalInfo | json }}
+</pre>
